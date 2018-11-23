@@ -8,7 +8,7 @@ import android.os.Environment;
  * @date:2018/11/23 22:31
  * @desc:
  */
-public class FileUtil {
+public class MtFileUtil {
 
     public static String getAppPath(Context context) {
         return getExternalStorageDirectory() + "/" + context.getPackageName();
