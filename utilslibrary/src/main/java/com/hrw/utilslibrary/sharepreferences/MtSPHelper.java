@@ -1,6 +1,6 @@
 package com.hrw.utilslibrary.sharepreferences;
 
-import android.app.Application;
+import android.content.Context;
 import android.content.SharedPreferences;
 import android.support.annotation.NonNull;
 
@@ -20,11 +20,11 @@ public class MtSPHelper {
     private MtSPHelper() {
     }
 
-    public static void init(Application context, String fileName) {
+    public static void init(Context context, String fileName) {
         init(context, fileName, 0);
     }
 
-    public static void init(Application context, String sharedPreferencesFileName, int mode) {
+    public static void init(Context context, String sharedPreferencesFileName, int mode) {
         if (mPreferencesMap.containsKey(sharedPreferencesFileName)) {
             try {
                 throw new Exception("the preferencesFileName already exists,Please named by other");
