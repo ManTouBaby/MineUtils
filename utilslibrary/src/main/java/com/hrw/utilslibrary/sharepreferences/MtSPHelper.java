@@ -25,14 +25,7 @@ public class MtSPHelper {
     }
 
     public static void init(Context context, String sharedPreferencesFileName, int mode) {
-        if (mPreferencesMap.containsKey(sharedPreferencesFileName)) {
-            try {
-                throw new Exception("the preferencesFileName already exists,Please named by other");
-            } catch (Exception throwable) {
-                throwable.printStackTrace();
-            }
-            return;
-        } else {
+        if (!mPreferencesMap.containsKey(sharedPreferencesFileName)) {
             SharedPreferences preferences = context.getSharedPreferences(sharedPreferencesFileName, mode);
             mPreferencesMap.put(sharedPreferencesFileName, preferences);
         }

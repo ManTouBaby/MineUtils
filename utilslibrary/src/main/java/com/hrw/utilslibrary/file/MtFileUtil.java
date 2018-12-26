@@ -18,5 +18,4 @@ public class MtFileUtil {
         return Environment.getExternalStorageDirectory().getAbsolutePath();
     }
 
-
 }
